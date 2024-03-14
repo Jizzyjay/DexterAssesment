@@ -3,16 +3,16 @@ import RatingIcon from "../../assets/rating.svg";
 
 const Ratings = ({ userImage, userName, profession }) => {
   return (
-    <div className=" flex items-center p-2 gap-4">
+    <div className=" flex items-center gap-[0.6rem]">
       <img
         src={userImage}
         alt={`Profile of ${userName}`}
-        className="w-12 h-12 object-cover rounded-full"
+        className="w-7 h-7 object-cover rounded-full"
       />
-      <h2 className="text-base font-semibold text-center">{userName}</h2>
-      <p className="text-gray-500 text-base text-center">{profession}</p>
+      <h2 className="text-[12px] text-[#4C4C4C] font-medium text-center">{userName}</h2>
+      <p className="text-[#808080] text-[12px] text-center">{profession}</p>
       <div className="flex items-center justify-center">
-        <img src= {RatingIcon} alt="ratings" />
+        <img src={RatingIcon} className="w-20 h-20" alt="ratings" />
       </div>
     </div>
   );

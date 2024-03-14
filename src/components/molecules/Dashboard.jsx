@@ -13,9 +13,9 @@ import RatedUsers from "../atoms/RatedUser";
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className="bg-[#fff] flex items-center justify-between pb-6">
-        <p>Welcome Dexter Admin,</p>
+    <div className="w-4/5 m-4">
+      <div className="bg-[#fff] flex items-center justify-between p-2 rounded-lg overflow-y-auto">
+        <p className="font-semibold">Welcome Dexter Admin,</p>
         <div className="flex gap-4 items-center">
           <img src={Notifications} alt="Notifications" />
           <img src={Profile} alt="Profile" />
@@ -24,23 +24,29 @@ const Dashboard = () => {
 
       <div className="flex justify-between">
         <DashboardCard text="Vendors" num="350" icon={Vendo} />
-        <DashboardCard text="Active Services" num="10" icon={Servic} />
-        <DashboardCard text="Active Services Request" num="56" icon={Req} />
-        <DashboardCard text="Users" num="1100+" icon={Use} />
+        <DashboardCard
+          text="Active Services"
+          num="10"
+          textColor="#F7B32B"
+          icon={Servic}
+        />
+        <DashboardCard
+          text="Active Services Request"
+          textColor="#C1292E"
+          num="56"
+          icon={Req}
+        />
+        <DashboardCard
+          text="Users"
+          num="1100+"
+          textColor="#34252F"
+          icon={Use}
+        />
       </div>
 
-      <div className="bg-[#fff] flex items-center justify-between pt-6 pb-6">
-        <p>Users on Dexter App</p>
-        <div className="flex gap-4 items-center">
-          <img src={Calander} alt="Calander" />
-          <p>Last 6 months</p>
-          <img src={Arrow} alt="Arrow" />
-        </div>
-      </div>
-
-      <div className="flex flex-row gap-6 ">
-        <div className="min-w-[1040px]">
-          <div className="bg-[#fff] flex items-center justify-between pt-6 pb-6">
+      <div className="flex flex-row gap-4 ">
+        <div className="w-full">
+          <div className="bg-[#fff] flex items-center justify-between p-2 mb-4 rounded-lg">
             <p>Users on Dexter App</p>
             <div className="flex gap-4 items-center">
               <img src={Calander} alt="Calander" />
@@ -50,7 +56,6 @@ const Dashboard = () => {
           </div>
           <Graph />
         </div>
-
         <div>
           <RatedVendors />
           <RatedUsers />

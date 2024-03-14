@@ -8,9 +8,9 @@ const UserRatings = ({ userImage, userName }) => {
         <img
           src={userImage}
           alt={`Profile of ${userName}`}
-          className="w-12 h-12 object-cover rounded-full"
+          className="w-8 h-8 object-cover rounded-full"
         />
-        <h2 className="text-base font-semibold text-center">{userName}</h2>
+        <h2 className="text-sm text-[#4C4C4C] font-medium text-center">{userName}</h2>
       </div>
 
       <div className="flex items-center justify-center">
