@@ -16,7 +16,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="bg-[#3A5743] h-screen fixed lg:w-[20%] md:w-[27%] p-4">
+    
+    <div className="bg-[#3A5743] h-[1100px]  lg:w-[20%] md:w-[27%] p-4">
       <img src={Logo} alt="Logo" className="pb-10" />
       <ul className="space-y-8">
         <li

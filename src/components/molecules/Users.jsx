@@ -4,7 +4,7 @@ import Notifications from "../../assets/Frame 1000002157.svg";
 import Profile from "../../assets/Frame 1000002357.svg";
 import moment from "moment/moment";
 import Filter from "../atoms/Filter";
-import Loader from "../atoms/Loader"; // Import the Loader component
+import Loader from "../atoms/Loader";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -27,13 +27,14 @@ const Users = () => {
   }, []);
 
   const handleFilter = (filterOption) => {
-    // setLoading(true);
-
+    setLoading(true);
     if (filterOption === "") {
       setFilteredUsers(users);
+      setLoading(false);
     } else {
       const filtered = users.filter((user) => user[filterOption] === null);
       setFilteredUsers(filtered);
+      setLoading(false);
     }
   };
 

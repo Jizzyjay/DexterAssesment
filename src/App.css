@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.responsive-container {
+  width: 800px;
+  /* Default width for large screens */
+}
+
+@media (max-width: 768px) {
+  .responsive-container {
+    width: 500px;
+    /* Width for tablet screens */
+  }
+}
