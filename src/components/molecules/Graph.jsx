@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   LineChart,
   Line,
@@ -45,23 +45,42 @@ const users = [
 
 const Graph = () => {
   return (
-    <ResponsiveContainer width="100%" height="80%" className="bg-white px-8 pt-4 pb-[1rem] rounded-md">
-      <LineChart
+    // <ResponsiveContainer width="100%" height={400} className="bg-white px-8 pt-4 pb-[1rem] rounded-md">
+    //   <LineChart
+    //     width={800}
+    //     height={300}
+    //     data={users}
+    //     margin={{
+    //       right: 30,
+    //     }}
+    //   >
+    //     <CartesianGrid strokeDasharray="3 3" />
+    //     <XAxis dataKey="months" stroke='#F7B32B' />
+    //     <YAxis />
+    //     <Tooltip content={<CustomTooltip />} />
+    //     <Legend />
+    //     <Line type="monotone" dataKey="users" stroke="#3A5743" />
+    //   </LineChart>
+    // </ResponsiveContainer>
+    <div className="w-full h-full md:w-[10px] lg:w-4/4">
+      <ResponsiveContainer width={500} height={670} className="bg-white lg:px-8 md:px-2 pt-4 pb-[1rem] rounded-md">
+        <LineChart
         width={500}
-        height={300}
-        data={users}
-        margin={{
-          right: 30,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="months" stroke='#F7B32B' />
-        <YAxis />
-        <Tooltip content={<CustomTooltip />} />
-        <Legend />
-        <Line type="monotone" dataKey="users" stroke="#3A5743" />
-      </LineChart>
-    </ResponsiveContainer>
+        height={100}
+          data={users}
+          margin={{
+            right: 30,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="months" stroke='#F7B32B' />
+          <YAxis />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend />
+          <Line type="monotone" dataKey="users" stroke="#3A5743" />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
@@ -107,13 +126,13 @@ const CustomTooltip = ({ active, payload, label }) => {
 //   }
 // };
 
-// CustomTooltip.propTypes = {
-//   active: PropTypes.bool, // Validate the 'active' prop
-//   payload: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       value: PropTypes.number,
-//     })
-//   ),
-//   label: PropTypes.string,
-// };
+CustomTooltip.propTypes = {
+  active: PropTypes.bool, // Validate the 'active' prop
+  payload: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+    })
+  ),
+  label: PropTypes.string,
+};
 

@@ -13,8 +13,8 @@ import RatedUsers from "../atoms/RatedUser";
 
 const Dashboard = () => {
   return (
-    <div className="w-4/5 m-4">
-      <div className="bg-[#fff] flex items-center justify-between p-2 rounded-lg overflow-y-auto">
+    <div className="lg:w-4/5 md:w-3/5 m-4">
+      <div className="bg-[#fff] flex items-center justify-between p-2 lg:w-full md:w-[485px] rounded-lg">
         <p className="font-semibold">Welcome Dexter Admin,</p>
         <div className="flex gap-4 items-center">
           <img src={Notifications} alt="Notifications" />
@@ -22,7 +22,28 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between ">
+        <DashboardCard text="Vendors" num="350" icon={Vendo} />
+        <DashboardCard
+          text="Active Services"
+          num="10"
+          textColor="#F7B32B"
+          icon={Servic}
+        />
+        <DashboardCard
+          text="Active Services Request"
+          textColor="#C1292E"
+          num="56"
+          icon={Req}
+        />
+        <DashboardCard
+          text="Users"
+          num="1100+"
+          textColor="#34252F"
+          icon={Use}
+        />
+      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-1 gap-x-12 mr-4">
         <DashboardCard text="Vendors" num="350" icon={Vendo} />
         <DashboardCard
           text="Active Services"
@@ -44,9 +65,9 @@ const Dashboard = () => {
         />
       </div>
 
-      <div className="flex flex-row gap-4 ">
+      <div className="flex flex-row lg:flex-row md:flex-col gap-4 ">
         <div className="w-full">
-          <div className="bg-[#fff] flex items-center justify-between p-2 mb-4 rounded-lg">
+          <div className="bg-[#fff] lg:w-[95%] md:w-full flex items-center justify-between p-2 mb-4 rounded-lg">
             <p>Users on Dexter App</p>
             <div className="flex gap-4 items-center">
               <img src={Calander} alt="Calander" />
@@ -56,7 +77,7 @@ const Dashboard = () => {
           </div>
           <Graph />
         </div>
-        <div>
+        <div className="md:flex-row">
           <RatedVendors />
           <RatedUsers />
         </div>

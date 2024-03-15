@@ -2,7 +2,7 @@ import Ratings from "./Ratings";
 
 const RatedVendors = () => {
   return (
-    <div className="bg-white w-[320px] max-h-[360px] p-4 rounded-lg shadow-md mb-4 overflow-y-auto">
+    <div className="bg-white lg:w-[320px] md:w-full max-h-[360px] p-4 rounded-lg shadow-md mb-4 overflow-y-auto">
       <h3 className="text-xl text-[#6A6B6D] items-center font-normal">Top Rated Vendors</h3>
 
       <div className="space-y-1">
