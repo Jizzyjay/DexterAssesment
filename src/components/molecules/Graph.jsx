@@ -92,7 +92,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 CustomTooltip.propTypes = {
-  active: PropTypes.bool, // Validate the 'active' prop
+  active: PropTypes.bool,
   payload: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.number,

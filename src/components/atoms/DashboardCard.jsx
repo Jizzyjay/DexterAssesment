@@ -6,7 +6,7 @@ const DashboardCard = ({ icon, num, text, textColor }) => {
       <div className="flex flex-col gap-y-4">
         <img src={icon} alt={icon} className="w-14 h-14 md:mr-[5rem] items-start" />
         <div className="flex flex-col items-center">
-          <h3 className={`font-semibold text-${textColor}`}>{num}</h3>
+          <h3 className={`font-semibold text-[${textColor}]`}>{num}</h3>
           <h3 className={`text-base font-normal text-[#5B5B5B]`}>{text}</h3>
         </div>
       </div>
